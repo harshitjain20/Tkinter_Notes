@@ -1,0 +1,22 @@
+from tkinter import *
+from tkinter import messagebox as msg
+root = Tk()
+root.geometry("400x200")
+# btn =Button(root,text="Click Me",activebackground="red",activeforeground="yellow",bd=10,
+#             command=lambda: msg.showinfo("message","hello mini"),fg="white",bg="black",
+#             relief=SUNKEN,
+#             )
+
+# btn.pack(expand=True)
+# btn.pack(fill=X)
+# btn.pack(fill=Y,side=LEFT)
+# btn.pack(side=LEFT,anchor="n",padx="30",pady="20",ipadx="40",ipady="30")
+# =============================================================
+# either we can use ipadx option in pack method or we can pass the padx value in widgets constructor
+btn =Button(root,text="Click Me",activebackground="red",activeforeground="yellow",bd=10,
+            command=lambda: msg.showinfo("message","hello mini"),fg="white",bg="black",
+            relief=SUNKEN,padx=40,pady=20
+            )
+btn.pack(side=LEFT,anchor="n",padx="30",pady="20",ipadx="40")
+
+root.mainloop()
